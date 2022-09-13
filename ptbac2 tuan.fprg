@@ -1,0 +1,60 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="tuan2"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-09-12 10:38:38 SA"/>
+        <attribute name="created" value="dHVhbjI7TEFQVE9QLVFTR08xVU8yOzIwMjItMDktMTI7MTA6MTk6MDggU0E7Mjg0OA=="/>
+        <attribute name="edited" value="dHVhbjI7TEFQVE9QLVFTR08xVU8yOzIwMjItMDktMTI7MTA6MTk6MzkgU0E7MTt0dWFuMjtMQVBUT1AtUVNHTzFVTzI7MjAyMi0wOS0xMjswOTozNDoyNSBTQTs1ODcx"/>
+        <attribute name="edited" value="dHVhbjI7TEFQVE9QLVFTR08xVU8yOzIwMjItMDktMTI7MTA6Mzg6MzggU0E7NjsyOTY1"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="a" type="Real" array="False" size=""/>
+            <declare name="b" type="Real" array="False" size=""/>
+            <declare name="c" type="Real" array="False" size=""/>
+            <declare name="x" type="Real" array="False" size=""/>
+            <declare name="delta" type="Real" array="False" size=""/>
+            <declare name="x1" type="Real" array="False" size=""/>
+            <declare name="x2" type="Real" array="False" size=""/>
+            <input variable="a"/>
+            <input variable="b"/>
+            <input variable="c"/>
+            <if expression="a=0">
+                <then>
+                    <if expression="b=0">
+                        <then>
+                            <output expression="&quot;Ph&#432;&#417;ng tr&#236;nh v&#244; nghi&#7879;m&quot;" newline="True"/>
+                        </then>
+                        <else>
+                            <assign variable="x" expression="-c/b"/>
+                        </else>
+                    </if>
+                </then>
+                <else>
+                    <assign variable="Delta" expression="b*b-4*a*c"/>
+                    <if expression="Delta&lt;0">
+                        <then>
+                            <output expression="&quot;Ph&#432;&#417;ng tr&#236;nh v&#244; nghi&#7879;m&quot;" newline="True"/>
+                        </then>
+                        <else>
+                            <if expression="Delta&gt;=0">
+                                <then>
+                                    <assign variable="x1" expression="(-b+sqrt(delta))/(2*a)"/>
+                                    <output expression="x1" newline="True"/>
+                                    <assign variable="x2" expression="(-b-sqrt(delta))/(2*a)"/>
+                                    <output expression="x2" newline="True"/>
+                                </then>
+                                <else>
+                                    <output expression="&quot;Ph&#432;&#417;ng tr&#236;nh v&#244; nghi&#7879;m&quot;" newline="True"/>
+                                </else>
+                            </if>
+                        </else>
+                    </if>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>
